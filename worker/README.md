@@ -1,4 +1,4 @@
 ## Worker Java App
 
 * Build Status  
-[![Build Status](http://localhost:8080/buildStatus/icon?job=instavote%2Fworker-build)](http://localhost:8080/job/instavote/job/worker-build/)
+[![Build Status](https://7621-129-126-8-34.ngrok.io/buildStatus/icon?job=instavote%2Fworker-build)](https://7621-129-126-8-34.ngrok.io/job/instavote/job/worker-build/)
