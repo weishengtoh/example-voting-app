@@ -61,7 +61,7 @@ pipeline{
                 echo 'Packaging worker app with Docker'
                 script{
                     docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin')
-                    def workerImage = docker.build('weihengtoh/jenkins_sample:v${env.BUILD_ID}', './worker')
+                    def workerImage = docker.build('weishengtoh/jenkins_sample:v${env.BUILD_ID}', './worker')
                     workerImage.push()
                     workerImage.push('latest')
                 }
