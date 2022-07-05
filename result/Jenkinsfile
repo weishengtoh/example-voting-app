@@ -12,10 +12,11 @@ pipeline{
             }
             steps{
                 echo 'Compiling result app...'
+                dir('result'){
+                    sh 'npm install'
+                }
             }
-            dir('result'){
-                sh 'npm install'
-            }
+
         }
         stage('test'){
             when{
