@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.8'
 
 volumes:
   db-data:
@@ -9,7 +9,8 @@ networks:
 
 services:
   vote:
-    image: weishengtoh/vote:v1
+    image: weishengtoh/vote:latest
+    build: ./vote
     ports:
       - 5002:80
     depends_on:
@@ -31,9 +32,10 @@ services:
       POSTGRES_HOST_AUTH_METHOD: trust
 
   result:
-    image: weishengtoh/result:v1
+    image: weishengtoh/result:latest
+    build: ./result
     ports:
-      - 5003:80
+      - 5003:4000
     depends_on:
       - db
     networks:
@@ -41,6 +43,7 @@ services:
 
   worker:
     image: weishengtoh/worker:latest
+    build: ./worker
     depends_on:
       - redis
       - db
