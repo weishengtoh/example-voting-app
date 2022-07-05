@@ -9,7 +9,7 @@ networks:
 
 services:
   vote:
-    image: initcron/vote:latest
+    image: weishengtoh/vote:v1
     ports:
       - 5002:80
     depends_on:
@@ -31,7 +31,7 @@ services:
       POSTGRES_HOST_AUTH_METHOD: trust
 
   result:
-    image: initcron/result:latest
+    image: weishengtoh/result:v1
     ports:
       - 5003:80
     depends_on:
@@ -40,7 +40,7 @@ services:
       - instavote
 
   worker:
-    image: initcron/worker:latest
+    image: weishengtoh/worker:latest
     depends_on:
       - redis
       - db
