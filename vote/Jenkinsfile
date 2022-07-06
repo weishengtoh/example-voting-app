@@ -61,7 +61,7 @@ pipeline{
 
     post{
         always{
-            echo 'The pipeline run has completed...'
+            echo 'The vote pipeline has completed...'
         }
         failure{
             slackSend(channel: 'jenkins-instavote', message: "Build Failed - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
