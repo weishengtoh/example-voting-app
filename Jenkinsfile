@@ -246,7 +246,7 @@ pipeline {
   }
   post {
     always {
-      echo 'The pipeline for instavote app has completed...'
+      echo 'The mono pipeline for instavote app has completed...'
     }
 
     failure {
